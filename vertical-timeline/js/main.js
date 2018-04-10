@@ -1,9 +1,9 @@
 (function(){
 	function VerticalTimeline( element ) {
 		this.element = element;
-		this.blocks = this.element.getElementsByClassName("js-cd-block");
-		this.images = this.element.getElementsByClassName("js-cd-img");
-		this.contents = this.element.getElementsByClassName("js-cd-content");
+		this.blocks = this.element.getElementsByClassName("js-block");
+		this.images = this.element.getElementsByClassName("js-img");
+		this.contents = this.element.getElementsByClassName("js-content");
 		this.offset = 0.8;
 		this.hideBlocks();
 	};
@@ -17,8 +17,8 @@
 		for( var i = 0; i < this.blocks.length; i++) {
 			(function(i){
 				if( self.blocks[i].getBoundingClientRect().top > window.innerHeight*self.offset ) {
-					self.images[i].classList.add("cd-is-hidden"); 
-					self.contents[i].classList.add("cd-is-hidden"); 
+					self.images[i].classList.add("is-hidden"); 
+					self.contents[i].classList.add("is-hidden"); 
 				}
 			})(i);
 		}
@@ -31,18 +31,18 @@
 		var self = this;
 		for( var i = 0; i < this.blocks.length; i++) {
 			(function(i){
-				if( self.contents[i].classList.contains("cd-is-hidden") && self.blocks[i].getBoundingClientRect().top <= window.innerHeight * self.offset ) {
+				if( self.contents[i].classList.contains("is-hidden") && self.blocks[i].getBoundingClientRect().top <= window.innerHeight * self.offset ) {
 					// add bounce-in animation
-					self.images[i].classList.add("cd-timeline__img--bounce-in");
-					self.contents[i].classList.add("cd-timeline__content--bounce-in");
-					self.images[i].classList.remove("cd-is-hidden");
-					self.contents[i].classList.remove("cd-is-hidden");
+					self.images[i].classList.add("timeline__img--bounce-in");
+					self.contents[i].classList.add("timeline__content--bounce-in");
+					self.images[i].classList.remove("is-hidden");
+					self.contents[i].classList.remove("is-hidden");
 				}
 			})(i);
 		}
 	};
 
-	var verticalTimelines = document.getElementsByClassName("js-cd-timeline"),
+	var verticalTimelines = document.getElementsByClassName("js-timeline"),
 		verticalTimelinesArray = [],
 		scrolling = false;
 	if( verticalTimelines.length > 0 ) {
