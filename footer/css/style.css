@@ -1,17 +1,26 @@
 body{
 	width: auto;
-	min-width: 1366px;
-	height: auto;
+	height: auto;	
 }
+@media screen and (max-width: 800px) {
+.footer__block_top{
+	padding-bottom: 1.0rem !important;
+}
+  .footer__link__small{
+  	display: none;
+  }
+}
+
 footer{
 	position: absolute;
 	bottom: 0;	
   	font-family: "Droid Serif", serif;
   	vertical-align: center;
 	text-align: center;
+	min-width: 100%;
 }
 .footer__block_bottom{
-	width: 1366px;
+	width: 100%;
 	height: auto;
 	display: block;
 	background-color: #aa0d0d;
