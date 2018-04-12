@@ -82,14 +82,15 @@ footer{
   	display: none;
 }
 .footer__social__media{
-	font-size: 2.0rem;
+	margin-left: 0.8rem;
+	font-size: 2.1rem;
 }
 .footer__link__big{
 	margin-left: 0.4rem;
 }
 .footer__link__big a{
-	font-size: 1.0rem !important;
-	margin-right: 1rem;
+	font-size: 0.9rem !important;
+	margin-right: 0.5rem;
 }
 .footer__block_bottom{
 }
