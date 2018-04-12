@@ -2,14 +2,6 @@ body{
 	width: auto;
 	height: auto;	
 }
-@media screen and (max-width: 800px) {
-.footer__block_top{
-	padding-bottom: 1.0rem !important;
-}
-  .footer__link__small{
-  	display: none;
-  }
-}
 
 footer{
 	position: absolute;
@@ -81,4 +73,31 @@ footer{
 }
 .footer__content{
 	width: 20px;	
+}
+@media screen and (max-width: 800px) {
+.footer__block_top{
+	padding-bottom: 1.0rem ;
+}
+.footer__link__small{
+  	display: none;
+}
+.footer__social__media{
+	font-size: 2.0rem;
+}
+.footer__link__big{
+	margin-left: 0.4rem;
+}
+.footer__link__big a{
+	font-size: 1.0rem !important;
+	margin-right: 1rem;
+}
+.footer__block_bottom{
+}
+.footer__quote{
+	padding-top: 15px;
+	font-size: 1.2rem;
+}
+.footer__copyright__txt{
+	font-size: 0.8rem;
+}
 }
